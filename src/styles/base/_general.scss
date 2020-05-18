@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700,900");
+
+
+html{
+  /* horizontal scroll fix */
+  // overflow-X: hidden;
+}
+
+body{
+  font-family: $main-font;
+}
+
+h1{
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+p{
+  color: $white-clr;
+}
+
+p + p{
+  margin-top: 1em;
+}
+
+.btn{
+  display: inline-block;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: .5em 1.75em;
+  color: $accent-clr;
+  border-color: $accent-clr;
+  transition: all .3s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus{
+  color: $secondary-clr;
+  background-color: $accent-clr;
+  transition: all .3s ease-in-out;
+}
+
+/* clear fix */
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* column system */
+
+[class^=col-] {
+	width: 100%;
+	margin-top: 1em;
+}
+
+[class^=col-]:first-child {
+	margin-top: 0;
+}
+
+.col-1 {
+	width: 33.333334%;
+	float: left;
+}
+
+@media (min-width: 46rem) {
+
+	[class^=col-] {
+    float: left;
+    margin-top: 0;
+	}
+
+	[class^=col-] + [class^=col-] {
+		padding-left: 1.2em;
+	}
+
+	.col-3 {
+		width: 50%;
+	}
+
+	.col-1 {
+		width: 16.6666%;
+	}
+}

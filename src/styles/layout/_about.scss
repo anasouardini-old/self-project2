@@ -1,0 +1,81 @@
+
+
+
+
+
+/*
+  //////////////////////
+ //////// HERO ////////
+//////////////////////
+*/
+
+
+.home-about-container{
+  width: 75vw;
+  margin: auto;
+}
+
+.home-about-textbox{
+  position: relative;
+  padding: 5.5em;
+  width: 100vw;
+  margin-left: -12.5vw;
+  background-color: $secondary-clr;
+  outline: 2px solid $accent-clr;
+  outline-offset: -3em;
+}
+
+.home-about-textbox h1{
+  position: absolute;
+  left: 50%;
+  top: 1.2rem;
+  transform: translateX(-50%);
+  background-color: $secondary-clr;
+  padding: 0 .5em;
+  margin-bottom: 0;
+}
+
+@media(max-width: 504px){
+  .home-about-textbox h1{
+    font-size: 2rem;
+    top: 1.6rem;
+  }
+}
+
+@media(max-width: 402px){
+  .home-about-textbox h1{
+    font-size: 1.45rem;
+    top: 1.95rem;
+  }
+}
+
+@media(min-width: 50rem){
+  .home-about{
+    background: url('../imgs/who-we-are.jpg') no-repeat center;
+    background-size: cover;
+    padding: 0 0  5em 3em;
+  }
+
+  .home-about-textbox{
+    width: 23em;
+    top: -5em;
+    margin-left: 0;
+    padding: 4.5em;
+    outline-offset: -2.5em;
+    text-align: left;
+    box-shadow: 0 0 3em 0 rgba(#000, .3);
+    
+    h1{
+      font-size: 2rem;
+      top: 0.55em;
+      left: 4.8em;
+    }
+
+    p{
+      font-size: 1.2rem;
+    }
+  }
+
+
+
+}

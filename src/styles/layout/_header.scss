@@ -1,0 +1,47 @@
+
+
+
+
+
+/*
+  ////////////////////////
+ //////// HEADER ////////
+////////////////////////
+*/
+
+
+header{
+  position:  absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 1em;
+}
+
+header li{
+  display: inline-block;
+  margin: 1em;
+}
+
+header nav a{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: .8rem;
+  padding: .5em;
+  color: $white-clr;
+}
+
+header nav a:hover,
+header nav a:focus{
+  color: #CCC;
+}
+
+@media (min-width: 60rem){
+  header .logo{
+    float: left;
+  }
+  
+  header nav{
+    float: right;
+  }
+}

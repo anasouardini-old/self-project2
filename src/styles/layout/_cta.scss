@@ -1,0 +1,28 @@
+.cta {
+	background-color: #00ff6c;
+  padding: 5em 0;
+  
+  h1{
+    color: $secondary-clr;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+
+  h1 span{
+    font-weight: 100;
+    display: block;    
+  }
+
+  .btn{
+    color: $secondary-clr;
+    border-color: currentColor;
+    font-weight: 700;
+  }
+
+  .btn:hover,
+  .btn:focus{
+    color: $accent-clr;
+    background-color: $secondary-clr;
+    border-color: $secondary-clr;
+  }
+}
