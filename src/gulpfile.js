@@ -21,13 +21,13 @@ function css() {
 }
 
 /* //// IMAGES WEBP COMPRESSION //// */
-function imgwebp() {
+exports.imgwebp = function imgwebp() {
   return src(paths.imgs).pipe(webp()).pipe(src(paths.imgs));
 }
 
 
 /* //// SERVE //// */
-function serve() {
+exports.default = function serve() {
   browserSync.init({
     server: {
       baseDir: "./build",
@@ -40,11 +40,16 @@ function serve() {
   watch("build/scripts/*.js").on("change", browserSync.reload);
 }
 
-/*
-  /////////////////
- //// DEFAULT ////
-/////////////////
-*/
+/* //// FINISH //// */
+function copySrc(){
+  return src("src/*/*/*/*/*")
+    .pipe(dest("build/src"));
+  
+}
 
-exports.imgwebp = imgwebp;
-exports.default = serve;
+function copySettings(){
+  return src(["gulpfile.js", "package.json"])
+    .pipe(dest("build/src"));
+}
+
+exports.finish = parallel(copySrc, copySettings);
